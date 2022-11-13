@@ -156,8 +156,7 @@
 
     <div id="form" class="content-wrapper form-wrapper">
       <iframe class="pc-content tablet-content mobile-content map-widget"
-        src="https://yandex.ru/map-widget/v1/?um=constructor%3A430510aadb41e220c03f17fb3b3382aaa4f99ab7df026a7c49f5a4ca5e20a829&amp;source=constructor"
-       frameborder="0"></iframe>
+        src="https://yandex.ru/map-widget/v1/?um=constructor%3A430510aadb41e220c03f17fb3b3382aaa4f99ab7df026a7c49f5a4ca5e20a829&amp;source=constructor"></iframe>
       <form class="form">
         <h3>Заказать звонок</h3>
 
@@ -166,13 +165,13 @@
         <input type="text" class="text-input small-text" id="patronymic" placeholder="Отчество">
         <input type="email" class="text-input small-text" id="mail" placeholder="Электронная почта" required>
 
-        <label class="text-input phone-label">
-          <span class="footer-text number-prefix">+375</span>
-          <input type="text" onkeypress='validateNumbersInput(event)' pattern="(29|33|25)"
+        <div class="text-input phone-label">
+          <label for="prefix"><span class="footer-text number-prefix">+375</span></label>
+            <input id="prefix" type="text" onkeypress='validateNumbersInput(event)' pattern="(29|33|25)"
             class="text-input small-text prefix-input" id="prefix" placeholder="29" required>
-          <input type="text" onkeypress='validateNumbersInput(event)' pattern="(^\d{7}$)"
+            <input type="text" onkeypress='validateNumbersInput(event)' pattern="(^\d{7}$)"
             class="text-input small-text phone-input" id="phone" required>
-        </label>
+        </div>
 
         <input type="text" pattern="([01]?[0-9]|2[0-3]):[0-5][0-9]" class="text-input small-text" id="time"
           placeholder="Укажите время (пример 20:00)">
@@ -192,26 +191,26 @@
         7 902 347</p>
       <p class="footer-text">Официальный сайт:<br>dveri.by<br><br>Мы в соцсетях:<br>
         <a href="https://vk.com/dzveriby" target="_blank" class="footer-icon">
-          <img src="./img/vk.png" width=20 alt="vk" />
+          <img src="img/vk.png" width=20 alt="vk" />
         </a>
         <a href="https://www.instagram.com/dveriby/" target="_blank" class="footer-icon">
-          <img src="./img/inst.png" width=20 alt="inst" />
+          <img src="img/inst.png" width=20 alt="inst" />
         </a>
         <a href="https://www.facebook.com/dveriby/" target="_blank" class="footer-icon">
-          <img src="./img/facebook.png" width=20 alt="facebook" />
+          <img src="img/facebook.png" width=20 alt="facebook" />
         </a>
       </p>
     </div>
     <div class="footer-text_container mobile-content">
       <div class="footer-text">Официальный сайт: dveri.by<br><br>Мы в соцсетях:<br>
         <a href="https://vk.com/dzveriby" target="_blank" class="footer-icon">
-          <img src="./img/vk.png" width=20 alt="vk" />
+          <img src="img/vk.png" width=20 alt="vk" />
         </a>
         <a href="https://www.instagram.com/dveriby/" target="_blank" class="footer-icon">
-          <img src="./img/inst.png" width=20 alt="inst" />
+          <img src="img/inst.png" width=20 alt="inst" />
         </a>
         <a href="https://www.facebook.com/dveriby/" target="_blank" class="footer-icon">
-          <img src="./img/facebook.png" width=20 alt="facebook" />
+          <img src="img/facebook.png" width=20 alt="facebook" />
         </a>
       </div>
       <div class="footer-text">Наш официальный адрес: г. Минск, ул. Ленина, 4<br>УНП 00987465398548<br>
