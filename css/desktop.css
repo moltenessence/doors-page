@@ -106,7 +106,6 @@ h5 {
 }
 
 .nav-item:hover {
-  width: 200px;
   background-color: #2A1D17;
   border-radius: 2px;
 }
