@@ -1,8 +1,12 @@
 @media (max-width: 760px) {
-
   .pc-content:not(.mobile-content),
   .tablet-content:not(.mobile-content) {
     display: none
+  }
+
+  .nav-item:hover{
+    background-color: inherit;
+    width: inherit;
   }
 
   .header {
@@ -24,27 +28,14 @@
   }
 
   .nav-item {
-    margin: 5px 0;
     height: 30px;
-    border: 2px solid #464547;
 
     font-size: 16px;
     line-height: 15px;
   }
 
-  .nav-item:hover {
-    background-color: white
-  }
-
   .nav-item+.nav-item {
     margin-left: 0
-  }
-
-  .nav-item_primary {
-    margin-left: 0;
-    width: 100%;
-    box-sizing: border-box;
-    order: -1;
   }
 
   .content-wrapper {

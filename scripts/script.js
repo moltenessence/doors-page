@@ -12,46 +12,43 @@ const btnPrev1 = document.querySelector('#main-slider .btn-prev');
 const btnNext2 = document.querySelector('#reviews .btn-next');
 const btnPrev2 = document.querySelector('#reviews .btn-prev');
 
-const act = 'active'; // Класс активности
+const act = 'active'; 
 
-function btnNext(a) { // Листание вперед (универсальная, в а вписывается номер слайдера), вешать на кнопки
-  if (a == 1) pos1 -= itemWidth1(); // Уменьшение константы позиции на шаг прокрутки
+function btnNext(a) {
+  if (a == 1) pos1 -= itemWidth1(); 
   else pos2 -= itemWidth2();
   
-  setPos(a); // Сдвиг соответствующего трека на необходимую длину
-  checkBtns(a); // Проверка кнопок
+  setPosition(a); 
+  checkButtons(a);
 }
 
-function btnPrev(a) { // Листание назад (универсальная, в а вписывается номер слайдера), вешать на кнопки
-  if (a == 1) pos1 += itemWidth1(); // Умвеличение константы позиции на шаг прокрутки
+function btnPrev(a) {
+  if (a == 1) pos1 += itemWidth1();
   else pos2 += itemWidth2();
 
-  setPos(a); // Сдвиг соответствующего трека на необходимую длину
-  checkBtns(a); // Проверка кнопок
+  setPosition(a);
+  checkButtons(a); 
 }
 
-const setPos = (a) => { // Сдвиг соответствующего трека на необходимую длину
+const setPosition = (a) => { 
   if (a == 1) track1.style.transform = `translateX(${pos1}px)`;
   else track2.style.transform = `translateX(${pos2}px)`;
 }
 
-const checkBtns = (a) => { // Проверка кнопок
+const checkButtons = (a) => {
   if (a == 1) {
-    btnPrev1.disabled = pos1 === 0; // "назад" неактивна, если позиция = 0
-    btnNext1.disabled = pos1 <= -itemWidth1(); // "вперед" неактивна, если позиция = -шагу трека
+    btnPrev1.disabled = pos1 === 0; 
+    btnNext1.disabled = pos1 <= -itemWidth1(); 
   } else {
-    btnPrev2.disabled = pos2 === 0; // "назад" неактивна, если позиция = 0
-    btnNext2.disabled = pos2 <= -3 * itemWidth2(); // "вперед" неактивна, если позиция = -3 шагам трека
+    btnPrev2.disabled = pos2 === 0; 
+    btnNext2.disabled = pos2 <= -3 * itemWidth2();
   }
-  // В зависимости от кол-ва элементов слайдера разные условия для кнопки "вперед"
 }
 
-document.addEventListener("DOMContentLoaded", () => { // Событие при загрузке страницы
-  checkBtns(1);
-  checkBtns(2);
+document.addEventListener("DOMContentLoaded", () => {
+  checkButtons(1);
+  checkButtons(2);
 });
-
-// ЯКОРЬ
 
 const offset = document.documentElement.clientHeight / 2; // Расстояние скролла, при котором показать якорь
 const scrollUp = document.querySelector('.scroll-up'); // Собственно, якорь
@@ -63,13 +60,13 @@ window.addEventListener('scroll', () => { // Событие при скролл�
   else scrollUp.classList.remove(act); // Если нет - нет
 });
 
-scrollUp.addEventListener('click', () => { // Обработчик клика по якорю (что будет при клике по оном)
-  window.scrollTo({ // Проскроллить до самого верха плавно
+scrollUp.addEventListener('click', () => { 
+  window.scrollTo({ 
     top: 0,
     behavior: 'smooth'
   });
 
-  if (scrollUp.classList.contains(act)) scrollUp.classList.remove(act); // Убрать акт класс, если был
+  if (scrollUp.classList.contains(act)) scrollUp.classList.remove(act);
   scrollUp.click();
 });
 
