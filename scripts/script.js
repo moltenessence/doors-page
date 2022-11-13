@@ -1,22 +1,16 @@
-// СЛАЙДЕРЫ (ОБА)
+let pos1 = 0;
+let pos2 = 0;
 
-let pos1 = 0; // Позиция прокрутки 1 слайдера
-let pos2 = 0; // Позиция прокрутки 2 слайдера
-
- // Шаги прокрутки 1 и 2 слайдера
 const itemWidth1 = () => document.querySelector('#main-slider .slider-container').clientWidth;
 const itemWidth2 = () => document.querySelector('#reviews .slider-container').clientWidth;
 
-const track1 = document.querySelector('#main-slider .slider-track'); // Трек 1 слайдера (полоска с элемантами)
-const track2 = document.querySelector('#reviews .slider-track'); // Трек 2 слайдера (полоска с элемантами)
+const track1 = document.querySelector('#main-slider .slider-track'); 
+const track2 = document.querySelector('#reviews .slider-track'); 
 
-const btnNext1 = document.querySelector('#main-slider .btn-next'); // Кнопка "вперед" для 1 слайдера
-const btnPrev1 = document.querySelector('#main-slider .btn-prev'); // Кнопка "назад" для 1 слайдера
-const btnNext2 = document.querySelector('#reviews .btn-next'); // Кнопка "вперед" для 2 слайдера
-const btnPrev2 = document.querySelector('#reviews .btn-prev'); // Кнопка "назад" для 2 слайдера
-
-const ind1 = document.querySelectorAll('#main-slider .slider-indicator'); // Индикация (кружочки снизу) для 1 слайдера
-const ind2 = document.querySelectorAll('#reviews .slider-indicator'); // Индикация (кружочки снизу) для 2 слайдера
+const btnNext1 = document.querySelector('#main-slider .btn-next');
+const btnPrev1 = document.querySelector('#main-slider .btn-prev');
+const btnNext2 = document.querySelector('#reviews .btn-next');
+const btnPrev2 = document.querySelector('#reviews .btn-prev');
 
 const act = 'active'; // Класс активности
 
