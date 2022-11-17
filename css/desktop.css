@@ -40,19 +40,6 @@ h5 {
   line-height: 21px;
 }
 
-@media (min-width: 1300px) {
-
-  .tablet-content:not(.pc-content),
-  .mobile-content:not(.pc-content) {
-    display: none
-  }
-
-  .map-widget {
-    width: 125vh;
-    height: 77vh;
-    border: 0;
-  }
-}
 
 .secondary-text {
   font-weight: normal;
@@ -79,7 +66,7 @@ h5 {
 }
 
 .header {
-  padding: 15px 100px;
+  padding: 15px 80px;
   height: 40px;
   display: flex;
   flex-direction: row;
@@ -117,10 +104,6 @@ nav {
   justify-content: space-between;
 }
 
-.doors .content-wrapper:first-of-type {
-  margin-top: 70px
-}
-
 .description-container {
   padding: 55px 0 30px 110px;
   display: flex;
@@ -131,16 +114,57 @@ nav {
 }
 
 @media (min-width: 1300px) {
-  .doors .content-wrapper:nth-of-type(n+1) .description-container {
-    margin: 30px 0 40px 0
+
+  .tablet-content:not(.pc-content),
+  .mobile-content:not(.pc-content) {
+    display: none
   }
 
-  .doors .content-wrapper:nth-child(n+2) .description-container {
-    margin: 35px 0
+  .doors .content-wrapper {
+    margin-top: 100px;
+    position: relative;
   }
 
-  .doors .content-wrapper:nth-child(n+3) .description-container {
-    margin: 40px 0 30px 0
+  .content-img.interior-doors
+  {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: calc(100% + 60px);
+  }
+
+  .content-img.entrance-doors
+  {
+    position: absolute;
+    right: 0px;
+    top: -30px;
+    height: calc(100% + 60px);
+  }
+
+  .content-img.interior-doors
+  {
+    position: absolute;
+    left: 0px;
+    top: -30px;
+    height: calc(100% + 60px);
+  }
+
+  #interior-doors .description-container {
+    padding-left: 710px;
+  }
+
+  .content-img.terrace-doors
+  {
+    position: absolute;
+    right: -0px;
+    top: -30px;
+    height: calc(100% + 60px);
+  }
+
+  .map-widget {
+    width: 125vh;
+    height: 77vh;
+    border: 0;
   }
 
   .nav-item:hover {
@@ -218,8 +242,28 @@ nav {
 }
 
 .slider-item_text-container {
-  margin: 160px 0 0 210px
+  margin: 160px 0 0 210px;
 }
+
+.slider-item_text-container h2{
+  margin-bottom: 15px;
+  letter-spacing: 3px;
+}
+
+.slider-item_text-container h4{
+  font-size: 30px;
+}
+
+.description-container .text-container h3 {
+  font-size: 34px;
+  line-height: 35px;
+}
+
+.description-container .text-container .secondary-text {
+  font-size: 14px;
+  line-height: 21px;
+}
+
 
 .slider-buttons {
   top: 0;
