@@ -136,15 +136,15 @@ h5 {
 }
 
 @media (min-width: 1300px) {
-  .doors .content-wrapper:nth-of-type(3n+1) .description-container {
+  .doors .content-wrapper:nth-of-type(n+1) .description-container {
     margin: 30px 0 40px 0
   }
 
-  .doors .content-wrapper:nth-child(3n+2) .description-container {
+  .doors .content-wrapper:nth-child(n+2) .description-container {
     margin: 35px 0
   }
 
-  .doors .content-wrapper:nth-child(3n+3) .description-container {
+  .doors .content-wrapper:nth-child(n+3) .description-container {
     margin: 40px 0 30px 0
   }
 }
@@ -464,18 +464,16 @@ input[type="submit"].submit-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background-color: rgba(255, 124, 124, 0.238);
   border-radius: 50%;
-  box-shadow: inset 0 0 0 1px lightblue;
   cursor: pointer;
-  opacity: 0;
   visibility: hidden;
   transform: translateY(20px);
   z-index: 3;
 }
 
 .scroll-up.active {
-  opacity: .4;
+  opacity: .5;
   visibility: visible;
   transform: translateY(0);
 }
@@ -483,6 +481,7 @@ input[type="submit"].submit-btn {
 .scroll-up.active:hover {
   opacity: 1;
   transform: scale(1.2);
+  background-color: rgba(249, 114, 114, 0.547);
 }
 
 .scroll-up::before {
