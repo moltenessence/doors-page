@@ -87,9 +87,8 @@ h5 {
   background-color: #464547;
 }
 
-.nav {
+nav {
   display: flex;
-  list-style: none;
 }
 
 .nav-item {
