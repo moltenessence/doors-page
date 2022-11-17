@@ -43,6 +43,13 @@
     height: 35px;
   }
 
+  
+  .nav-item:hover {
+    background-color: #2A1D17;
+    border-radius: 2px;
+    padding: 0 35px;
+  }
+
   .nav-item+.nav-item {
     margin-left: 15px;
   }
