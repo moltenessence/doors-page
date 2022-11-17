@@ -1,16 +1,17 @@
+@font-face {
+  font-family: "Open Sans";
+  src: url('../fonts/OpenSans.ttf') format('truetype');
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-html {
-  font-family: 'Open Sans', Helvetica, sans-serif;
-}
-
 body {
   background-color: #e5e5e5;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans';
   margin: auto;
   max-width: 1440px;
 }
