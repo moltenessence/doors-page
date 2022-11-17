@@ -336,7 +336,8 @@ button:focus {
 }
 
 .form h3 {
-  margin-bottom: 25px
+  margin-bottom: 25px;
+  font-size: 30px;
 }
 
 .text-input {
