@@ -69,11 +69,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const scrollOffsetToShowScrollUp = document.documentElement.clientHeight / 2;
 const scrollUp = document.querySelector('.scroll-up');
 
-const getTop = () => window.pageYOffset || document.documentElement.scrollTop; // scroll position (Y)
+const getTop = () => window.pageYOffset || document.documentElement.scrollTop; 
 
-window.addEventListener('scroll', () => { // Событие при скроллинге страницы
-  if (getTop() > scrollOffsetToShowScrollUp) scrollUp.classList.add(activeAttribute); // Если проскроллено больше расстояния скролла - якорь акт
-  else scrollUp.classList.remove(activeAttribute); // Если нет - нет
+window.addEventListener('scroll', () => {
+  if (getTop() > scrollOffsetToShowScrollUp) scrollUp.classList.add(activeAttribute); 
+  else scrollUp.classList.remove(activeAttribute);
 });
 
 scrollUp.addEventListener('click', () => {
